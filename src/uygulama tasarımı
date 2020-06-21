@@ -1,0 +1,22 @@
+Anasayfa: 
+1. Arama Butonu
+2. Şehir Listesi
+
+Şehir tıklanınca açılan sayfa: Şehir detaylar
+
+Şehir Detay: 
+1. Arama Butonu
+2. Şehirde bulunan restoranlar
+
+Restoran tıklanınca açılan sayfa: Restoran detaylar
+
+Restoran Detay:
+1. Restoran detayları
+2. Rezervasyon yap URL yönlendirmesi
+
+API Linki: https://opentable.herokuapp.com/ 
+
+Örneğin Chicago için restoran listeleyecekseniz isteğiniz şu şekilde olmalı: 
+https://opentable.herokuapp.com/api/restaurants?city=Chicago)
+Tek bir restoran bilgisi için de ilgili restoranın ID'sini göndermeniz yeterli: 
+https://opentable.herokuapp.com/api/restaurants/7267)

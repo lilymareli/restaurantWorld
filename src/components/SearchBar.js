@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { SafeAreaView, Text, View, TextInput } from 'react-native'
 
@@ -14,4 +15,4 @@ const SearchBar = (props) => {
     )
 }
 
-export default SearchBar;
+export { SearchBar }
