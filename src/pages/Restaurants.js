@@ -29,10 +29,12 @@ const Restaurants = (props) => {
         })
     }
 
-    const renderSongs = ({ item }) => <ItemRest name={item.name} onCityPress={() =>Alert.alert("hop")} />
+    const renderRests = ({ item }) => <ItemRest name={item.name} onCityPress={() => 
+      { console.log(item.id)
+        props.navigation.navigate("Detail", { resId: item.id })}} />
+  
 
-
-    const searchSong = (text) => {
+    const searchRest = (text) => {
       let filteredList = originalRest.filter((item) => {
         console.warn(item)
         const itemData = item.name.toUpperCase()
@@ -48,14 +50,14 @@ const Restaurants = (props) => {
       <SafeAreaView style={styles.main.container}>
         <View style={{ flex: 1 }}>
   
-          <SearchBar onSearch={searchSong}/>
+          <SearchBar onSearch={searchRest}/>
   
           <FlatList
             refreshing={loading}
             onRefresh={fetchData}
             keyExtractor={(item, index) => index.toString()}
             data={myList}
-            renderItem={renderSongs}
+            renderItem={renderRests}
           
           />
   
